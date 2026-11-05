@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Este texto é para alterar com o js</h1>
+        <section>
+            <article>
+                <ul id="lista-filmes">
+                    <!--
+                        <li>
+                            <span class="rankung>1</span>
+                            <span class="filme">Star wars</span>
+                            <span class="ano">1977</span>
+                        </li>
+                    -->
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        //tarrefa 1: colocar no h1 o texto "Os meus filmes Favoritos"
+        //Passo 1: colocar id no h1
+        //passo 2: apanhar o elemento do html com o id titulo
+        const titulo = document.getElementById("titulo");
+        //Passo 3: alterar o texto do h1 
+        titulo.innerText = "Os meus filmes favorito";
+        //tarefa 2: Criar uma lista do filmes (array de JSON Objects)
+        const filmes = [
+            {'ranking' : 1, 'nome' : 'Shrek', 'ano': 2001},
+            {'ranking' : 2, 'nome' : 'Avatar', 'ano': 2009},
+            {'ranking' : 3, 'nome' : 'Pokemom', 'ano': 1999},
+            {'ranking' : 4, 'nome' : 'Spider-man', 'ano': 2002},
+            ];
+            //tarefa 3: Iterar o array de filmes e mandar apenas o nome para a
+            //consola com o comando console.log()
+            //Apanhar o elemento ul do html
+            const listaFilmes = document.getElementById("lista-filmes");
+
+            //tarefa 4: mostrar na consola o index do filme
+            filmes.forEach((filme, index) => {
+                console.log(index);
+                console.log(filme.nome);
+                //tarefa 5.1: criar um elemento span para o ranking
+                //tarefa 5.2: criar um elemento span para o nome do filme
+                //tarefa 5.3: criar um elemento span para o ano do filme
+                //tarefa 5.4: colocar os spans dentro do li
+                //tarefa 5.5: colocar o li dentro do ul
+                const novoLi = document.createElement("li");
+                const spanFilmes = document.createElement('span');
+                spanFilmes.className = "Filme";
+                spanFilmes.innerText = index + 1;
+
+
+
+
+
+
+            });
+            
+            
+
+    </script>
+</body>
+</html>
